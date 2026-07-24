@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>EduAI | Course Details</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .details-page { padding:70px 0 85px; }.course-hero,.detail-panel { background:#fff; border:1px solid #e8edf5; border-radius:18px; box-shadow:0 12px 38px rgba(0,0,0,.08); }.course-hero { align-items:center; display:flex; gap:32px; margin-bottom:24px; overflow:hidden; }.course-hero img { height:280px; object-fit:cover; width:42%; }.course-hero-copy { padding:30px 30px 30px 0; }.course-hero h1 { color:#1c2b4a; font-size:42px; margin:0 0 10px; }.course-hero p,.detail-panel p,.detail-list { color:#72809a; }.detail-grid { display:grid; gap:24px; grid-template-columns:1fr 1fr; }.detail-panel { padding:30px; }.detail-panel h2 { color:#1c2b4a; font-size:23px; margin:0 0 18px; }.detail-list { list-style:none; margin:0; padding:0; }.detail-list li { border-top:1px solid #e8edf5; padding:12px 0; }.detail-list li:first-child { border-top:0; padding-top:0; }.back-button { background:#2867d8; border-radius:30px; color:#fff; display:inline-block; font-weight:700; margin-top:10px; padding:12px 20px; }.back-button:hover { background:#174eae; color:#fff; }
+    @media (max-width:700px) { .course-hero { align-items:stretch; flex-direction:column; gap:0; }.course-hero img { height:210px; width:100%; }.course-hero-copy { padding:24px; }.course-hero h1 { font-size:32px; }.detail-grid { grid-template-columns:1fr; }.details-page { padding:45px 0 60px; } }
+  </style>
+</head>
+<body>
+  <div id="navigation" class="navbar-light bg-faded site-navigation"><div class="container-fluid"><div class="row">
+    <div class="col-20 align-self-center"><div class="site-logo"><a href="index.html"><img src="../pic/logo.jpeg" alt="EduAI Smart Learning"></a></div></div>
+    <div class="col-60 d-flex"><nav id="main-menu"><ul><li><a href="classes.html">Sessions</a></li><li><a href="assignments.html">Assignments</a></li><li><a href="quizzes.html">Quizzes</a></li><li><a href="chat-dr.html">Chat with Dr</a></li><li><a href="chat-assistant.html">Chat with Assistant</a></li><li><a href="profile.html">Profile</a></li><li><a href="coursess.html">Courses Offered</a></li></ul></nav></div>
+  </div></div></div>
+  <section class="section-top"><div class="container"><div class="col-lg-10 offset-lg-1 text-center"><div class="section-top-title"><h1>Course Details</h1><p>Explore the course overview, schedule, and learning goals.</p></div></div></div></section>
+  <main class="details-page"><div class="container">
+    <section class="course-hero"><img id="course-image" src="assets/img/course/1.png" alt="Course"><div class="course-hero-copy"><h1 id="course-title">Mathematics</h1><p id="course-description">Build confidence in algebra, equations, and problem solving.</p><p><strong>Instructor:</strong> <span id="course-instructor">Mr. Ahmed</span></p><a class="back-button" href="coursess.html">Back to Courses Offered</a></div></section>
+    <div class="detail-grid"><section class="detail-panel"><h2>Course overview</h2><ul id="course-topics" class="detail-list"></ul></section><section class="detail-panel"><h2>Course information</h2><ul id="course-info" class="detail-list"></ul></section></div>
+  </div></main>
+  <script>
+    var courses = {
+      'mathematics': { title:'Mathematics', image:'assets/img/course/1.png', description:'Build confidence in algebra, equations, and problem solving.', instructor:'Mr. Ahmed', topics:['Algebra and equations','Problem-solving strategies','Weekly practice and review'], info:['Schedule: Monday / Wednesday / Friday','Level: Intermediate','Progress: 91% overall grade'] },
+      'science': { title:'Science', image:'assets/img/course/2.png', description:'Discover energy, motion, experiments, and scientific thinking.', instructor:'Dr. Salma', topics:['Energy and motion','Laboratory preparation','Scientific investigation'], info:['Schedule: Tuesday / Thursday','Level: Intermediate','Progress: 86% overall grade'] },
+      'english': { title:'English', image:'assets/img/course/3.png', description:'Improve reading, writing, communication, and comprehension.', instructor:'Ms. Mona', topics:['Reading comprehension','Writing skills','Communication practice'], info:['Schedule: Monday / Thursday','Level: Intermediate','Progress: 95% overall grade'] },
+      'computer-science': { title:'Computer Science', image:'assets/img/course/4.png', description:'Learn digital skills, coding basics, and creative technology.', instructor:'Mr. Omar', topics:['Digital foundations','Coding basics','Creative technology projects'], info:['Schedule: Sunday / Wednesday','Level: Beginner','Progress: New course'] },
+      'social-studies': { title:'Social Studies', image:'assets/img/course/5.png', description:'Understand history, geography, communities, and culture.', instructor:'Ms. Huda', topics:['History and geography','Community and culture','Research skills'], info:['Schedule: Sunday / Tuesday','Level: Intermediate','Progress: New course'] },
+      'art-and-design': { title:'Art and Design', image:'assets/img/course/6.png', description:'Develop creativity through visual arts and design projects.', instructor:'Mr. Karim', topics:['Drawing and composition','Visual storytelling','Design projects'], info:['Schedule: Wednesday / Thursday','Level: Beginner','Progress: New course'] }
+    };
+    var key = new URLSearchParams(window.location.search).get('course') || 'mathematics';
+    var course = courses[key] || courses.mathematics;
+    document.title = 'EduAI | ' + course.title;
+    document.getElementById('course-title').textContent = course.title;
+    document.getElementById('course-description').textContent = course.description;
+    document.getElementById('course-instructor').textContent = course.instructor;
+    document.getElementById('course-image').src = course.image;
+    document.getElementById('course-image').alt = course.title;
+    document.getElementById('course-topics').innerHTML = course.topics.map(function(topic){ return '<li>' + topic + '</li>'; }).join('');
+    document.getElementById('course-info').innerHTML = course.info.map(function(item){ return '<li>' + item + '</li>'; }).join('');
+  </script>
+</body>
+</html>
