@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>EduAI | Chat with Dr</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .chat-page { padding: 70px 0; }
+    .subject-card { background: #fff; border-radius: 18px; padding: 42px; margin-bottom: 30px; min-height: 220px; box-shadow: 0 12px 38px rgba(0,0,0,.08); }
+    .subject-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px; }
+    .subject-heading-main { display:flex; align-items:center; gap:16px; }
+    .subject-image { width:112px; height:112px; border-radius:16px; object-fit:cover; }
+    .subject-heading h2 { margin:0; font-size:30px; }.subject-heading p { margin:5px 0 0; color:#777; }
+    .subject-heading > div:last-child { align-items:center; display:flex; gap:12px; }
+    .subject-button { background:#2867d8; border:0; border-radius:30px; color:#fff; cursor:pointer; font:inherit; font-size:14px; font-weight:700; padding:12px 20px; white-space:nowrap; }
+    .subject-button:hover { background:#174eae; color:#fff; }
+    .chat-box { border-top:1px solid #eee; display:none; padding-top:22px; }.chat-box.is-open { display:block; }
+    .chat-box p { color:#777; }.chat-input { border:1px solid #ddd; border-radius:10px; display:flex; gap:10px; padding:8px; }
+    .chat-input input { border:0; flex:1; outline:0; padding:10px; }.send-button { background:#2867d8; border:0; border-radius:8px; color:#fff; padding:0 18px; }
+    @media (max-width:575px) { .chat-page{padding:45px 0}.subject-card{padding:20px}.subject-heading{align-items:flex-start; flex-direction:column}.subject-heading > div:last-child{align-items:flex-start}.chat-input{flex-direction:column}.send-button{padding:10px} }
+  </style>
+</head>
+<body>
+  <div id="navigation" class="navbar-light bg-faded site-navigation"><div class="container-fluid"><div class="row"><div class="col-20 align-self-center"><div class="site-logo"><a href="index.html"><img src="../pic/logo.jpeg" alt="EduAI Smart Learning"></a></div></div><div class="col-60 d-flex"><nav id="main-menu"><ul><li><a href="classes.html">Sessions</a></li><li><a href="assignments.html">Assignments</a></li><li><a href="quizzes.html">Quizzes</a></li><li><a href="chat-dr.html">Chat with Dr</a></li><li><a href="chat-assistant.html">Chat with Assistant</a></li><li><a href="profile.html">Profile</a></li><li><a href="coursess.html">Courses Offered</a></li></ul></nav></div></div></div></div>
+  <section class="section-top"><div class="container"><div class="col-lg-10 offset-lg-1 text-center"><div class="section-top-title"><h1>Chat with Dr</h1><p>Choose a subject to contact the academic support team.</p></div></div></div></section>
+  <main class="chat-page"><div class="container">
+    <section class="subject-card"><div class="subject-heading"><div class="subject-heading-main"><img class="subject-image" src="assets/img/course/1.png" alt="Mathematics"><div><h2>Mathematics</h2><p>Ask about lessons, assignments, or progress.</p></div></div><button class="subject-button" type="button" data-chat-target="math-chat">Enter subject</button></div><div id="math-chat" class="chat-box"><p>Start a conversation with the mathematics doctor.</p><div class="chat-input"><input type="text" placeholder="Write your message"><button class="send-button" type="button">Send</button></div></div></section>
+    <section class="subject-card"><div class="subject-heading"><div class="subject-heading-main"><img class="subject-image" src="assets/img/course/2.png" alt="Science"><div><h2>Science</h2><p>Ask about lessons, assignments, or progress.</p></div></div><button class="subject-button" type="button" data-chat-target="science-chat">Enter subject</button></div><div id="science-chat" class="chat-box"><p>Start a conversation with the science doctor.</p><div class="chat-input"><input type="text" placeholder="Write your message"><button class="send-button" type="button">Send</button></div></div></section>
+    <section class="subject-card"><div class="subject-heading"><div class="subject-heading-main"><img class="subject-image" src="assets/img/course/3.png" alt="English"><div><h2>English</h2><p>Ask about lessons, assignments, or progress.</p></div></div><button class="subject-button" type="button" data-chat-target="english-chat">Enter subject</button></div><div id="english-chat" class="chat-box"><p>Start a conversation with the English doctor.</p><div class="chat-input"><input type="text" placeholder="Write your message"><button class="send-button" type="button">Send</button></div></div></section>
+  </div></main>
+  <script>document.querySelectorAll('[data-chat-target]').forEach(function(button){button.addEventListener('click',function(){var chat=document.getElementById(button.dataset.chatTarget);var open=chat.classList.toggle('is-open');button.textContent=open?'Hide chat':'Enter subject';if(open)chat.scrollIntoView({behavior:'smooth',block:'nearest'});});});</script>
+</body>
+</html>
