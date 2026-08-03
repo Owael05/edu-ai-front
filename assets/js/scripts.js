@@ -5,6 +5,20 @@ Version      : 1.0
 */
 (function($) {
 	'use strict';
+
+	/* Keep student-only start-page links hidden until sign-in. */
+	$(function() {
+		var signedIn = localStorage.getItem('edulebSignedIn') === 'true';
+		$('.auth-only').toggle(signedIn);
+
+		if (/signin\.html$/i.test(window.location.pathname)) {
+			$('.form').on('submit', function(event) {
+				event.preventDefault();
+				localStorage.setItem('edulebSignedIn', 'true');
+				window.location.href = 'index.html';
+			});
+		}
+	});
 	
 	jQuery(document).on('ready', function(){
 	
@@ -95,7 +109,9 @@ Version      : 1.0
 	}); 	
 	
 	/*START WOW ANIMATION JS*/
-	  new WOW().init();	
+	  if (typeof WOW !== 'undefined') {
+		  new WOW().init();
+	  }
 	/*END WOW ANIMATION JS*/	
 				
 })(jQuery);
@@ -104,4 +120,3 @@ Version      : 1.0
 
 
   
-

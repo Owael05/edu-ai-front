@@ -1,5 +1,4 @@
-use <!DOCTYPE html>
-<style>body > section.home_course { display: none; }</style>
+<style>body > section.home_course { display: none; } .auth-only { display: none; }</style>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -33,9 +32,9 @@ use <!DOCTYPE html>
 						<ul>
 							<li><a href="index.html">Start</a></li>
 							<li><a href="student-hub.html">Student Hub</a></li>
-							<li><a href="dashboard.html">Dashboard</a></li>
-							<li><a href="enrolled-courses.html">My Courses</a></li>
-							<li><a href="profile.html">Profile</a></li>
+							<li class="auth-only"><a href="dashboard.html">Dashboard</a></li>
+							<li class="auth-only"><a href="enrolled-courses.html">My Courses</a></li>
+							<li class="auth-only"><a href="profile.html">Profile</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -46,9 +45,9 @@ use <!DOCTYPE html>
 				<ul class="mobile_menu">
 					<li><a href="index.html">Start</a></li>
 					<li><a href="student-hub.html">Student Hub</a></li>
-					<li><a href="dashboard.html">Dashboard</a></li>
-					<li><a href="enrolled-courses.html">My Courses</a></li>
-					<li><a href="profile.html">Profile</a></li>
+					<li class="auth-only"><a href="dashboard.html">Dashboard</a></li>
+					<li class="auth-only"><a href="enrolled-courses.html">My Courses</a></li>
+					<li class="auth-only"><a href="profile.html">Profile</a></li>
 					<li><a href="signin.html">Sign In</a></li>
 					<li><a href="signup.html">Sign Up</a></li>
 				</ul>
@@ -120,8 +119,8 @@ use <!DOCTYPE html>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single_footer"><a href="index.html"><img src="../pic/logo.svg" alt=""></a><p>Student portal built from the Eduleb template.</p></div></div>
-				<div class="col-lg-2 col-sm-6 col-xs-12"><div class="single_footer"><h4>Pages</h4><ul><li><a href="dashboard.html">Dashboard</a></li></ul></div></div>
-				<div class="col-lg-2 col-sm-6 col-xs-12"><div class="single_footer"><h4>Study</h4><ul><li><a href="enrolled-courses.html">My Courses</a></li><li><a href="profile.html">Profile</a></li></ul></div></div>
+				<div class="col-lg-2 col-sm-6 col-xs-12 auth-only"><div class="single_footer"><h4>Pages</h4><ul><li><a href="dashboard.html">Dashboard</a></li></ul></div></div>
+				<div class="col-lg-2 col-sm-6 col-xs-12 auth-only"><div class="single_footer"><h4>Study</h4><ul><li><a href="enrolled-courses.html">My Courses</a></li><li><a href="profile.html">Profile</a></li></ul></div></div>
 				<div class="col-lg-3 col-sm-6 col-xs-12"><div class="single_footer"><h4>Contact Info</h4><div class="sf_contact"><span class="ti-map"></span><p>EduLeb learning platform</p></div><div class="sf_contact"><span class="ti-email"></span><p>support@eduleb.com</p></div></div></div>
 				<div class="col-lg-2 col-sm-6 col-xs-12"><div class="single_footer"><h4>Download App</h4><a href="#"><img src="assets/img/google-play.jpg" class="foot_img" alt=""></a><a href="#"><img src="assets/img/app-store.jpg" class="foot_img" alt=""></a></div></div>
 			</div>

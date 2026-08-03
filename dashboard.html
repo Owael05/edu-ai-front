@@ -1,5 +1,102 @@
-<!DOCTYPE html>
-<div class="preloaders"><span class="loader"></span></div>
-<style>#main-menu ul li:nth-child(4),#main-menu ul li:nth-child(5),#main-menu ul li:nth-child(6){display:none}</style>
-<script>document.addEventListener('DOMContentLoaded',function(){var u=document.querySelector('#main-menu ul'),p=u&&u.querySelector('a[href="profile.html"]');if(u&&!u.querySelector('a[href="enrolled-courses.html"]')){var l=document.createElement('li');l.innerHTML='<a href="enrolled-courses.html">My Courses</a>';u.insertBefore(l,p&&p.parentElement||null);}});</script>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>EduLeb | Dashboard</title><link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/fonts/font-awesome.min.css"><link rel="stylesheet" href="assets/fonts/themify-icons.css"><link rel="stylesheet" href="assets/css/style.css"></head><body><div id="navigation" class="navbar-light bg-faded site-navigation"><div class="container-fluid"><div class="row"><div class="col-20 align-self-center"><div class="site-logo"><a href="index.html"><img src="../pic/logo.svg" alt=""></a></div></div><div class="col-60 d-flex"><nav id="main-menu"><ul><li><a href="index.html">Start</a></li><li><a href="student-hub.html">Student Hub</a></li><li><a href="dashboard.html">Dashboard</a></li><li><a href="courses.html">Courses</a></li><li><a href="assignments.html">Assignments</a></li><li><a href="quizzes.html">Quizzes</a></li><li><a href="profile.html">Profile</a></li></ul></nav></div></div></div></div><section class="section-top"><div class="container"><div class="col-lg-10 offset-lg-1 text-center"><div class="section-top-title"><h1>Dashboard</h1><ul><li><a href="index.html">Start</a></li><li> / Dashboard</li></ul></div></div></div></section><section class="pricing-content section-padding"><div class="container"><div class="row text-center"><div class="col-lg-4 col-sm-4 col-xs-12"><div class="single-pricing"><div class="price-head"><h2>Progress</h2><span></span><span></span><span></span><span></span><span></span><span></span></div><h1 class="price">72%</h1><h5>Weekly completion</h5><ul><li>8 enrolled courses</li><li>5 pending tasks</li><li>3 quizzes</li><li>Revision reminders</li><li>Attendance tracking</li><li>Progress reports</li><li>Unlimited support</li></ul><a class="btn_one" href="student-hub.html">Open Hub</a></div></div><div class="col-lg-4 col-sm-4 col-xs-12"><div class="single-pricing"><div class="price-head"><h2>Tasks</h2><span></span><span></span><span></span><span></span><span></span><span></span></div><h1 class="price">05</h1><h5>Due soon</h5><ul><li>English draft</li><li>Math worksheet</li><li>Science report</li><li>Project outline</li><li>Quiz review</li><li>Profile check</li><li>Unlimited support</li></ul><a class="btn_one" href="assignments.html">View Assignments</a></div></div><div class="col-lg-4 col-sm-4 col-xs-12"><div class="single-pricing single-pricing-white"><div class="price-head"><h2>Focus</h2><span></span><span></span><span></span><span></span><span></span><span></span></div><span class="price-label">Today</span><h1 class="price">3 Hrs</h1><h5>Study session</h5><ul><li>Review notes</li><li>Practice quiz</li><li>Submit tasks</li><li>Update profile</li><li>Check deadlines</li><li>Course revision</li><li>Unlimited support</li></ul><a class="btn_one" href="quizzes.html">Start Quiz</a></div></div></div></div></section><script src="assets/js/jquery-1.12.4.min.js"></script><script src="assets/bootstrap/js/bootstrap.min.js"></script><script src="assets/js/scripts.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eduai | Dashboard</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/fonts/themify-icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body class="dashboard-page">
+  <div class="preloaders" aria-hidden="true"><span class="loader"></span></div>
+  <header class="dashboard-header">
+    <div class="dashboard-header__inner">
+      <a class="dashboard-logo site-logo" href="index.html" aria-label="EduLeb home"><img src="external/images/logo.jpeg" alt="EduLeb"></a>
+      <nav class="dashboard-nav" aria-label="Main navigation">
+        <a href="index.html">Start</a>
+        <a class="is-active" href="dashboard.html">Dashboard</a>
+        <a href="enrolled-courses.html">My Courses</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+      <div class="dashboard-account">
+        <a class="dashboard-icon-button" href="profile.html" aria-label="Open profile notifications"><i class="ti-bell"></i><span></span></a>
+        <a class="dashboard-profile-link" href="profile.html" aria-label="Open Student profile">
+          <div class="dashboard-avatar">S</div>
+          <div class="dashboard-account__copy"><strong>Student</strong><small>My account</small></div>
+          <i class="fa fa-angle-down dashboard-account__arrow"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="dashboard-welcome">
+      <div>
+        <p class="eyebrow">STUDENT OVERVIEW</p>
+        <h1>Welcome back, Student <span>✦</span></h1>
+        <p class="dashboard-welcome__text">Keep your learning moving forward. Here’s what needs your attention today.</p>
+      </div>
+      <a class="dashboard-button dashboard-button--light" href="enrolled-courses.html"><i class="ti-book"></i> Browse my courses</a>
+    </section>
+
+    <section class="dashboard-top-grid" aria-label="Student highlights">
+      <article class="dashboard-stat dashboard-stat--coral"><div class="dashboard-stat__icon"><i class="ti-pencil-alt"></i></div><div><strong>05</strong><span>Pending tasks</span><small>2 due this week</small></div></article>
+      <section class="dashboard-card dashboard-card--achievements">
+        <div class="dashboard-card__heading"><div><p class="eyebrow">KEEP GOING</p><h2>Recent achievements</h2></div><a href="profile.html">View profile <i class="fa fa-arrow-right"></i></a></div>
+        <div class="achievement-row"><div class="achievement-badge achievement-badge--gold"><i class="ti-medall-alt"></i></div><div><strong>Consistent learner</strong><span>Completed 3 lessons this week</span></div><small>NEW</small></div>
+        <div class="achievement-row"><div class="achievement-badge achievement-badge--purple"><i class="ti-check-box"></i></div><div><strong>Task starter</strong><span>Submitted your English essay on time</span></div><small>+20 XP</small></div>
+      </section>
+      <section class="dashboard-card dashboard-card--announcements">
+        <div class="dashboard-card__heading"><div><p class="eyebrow">STAY UPDATED</p><h2>Announcements</h2></div><button class="dashboard-more" aria-label="More announcements"><i class="fa fa-ellipsis-h"></i></button></div>
+        <a class="announcement-row" href="sessions.html"><span class="announcement-dot announcement-dot--purple"></span><div><strong>Live revision session this week</strong><small>English Language · 4 August at 16:00</small></div><i class="fa fa-angle-right"></i></a>
+        <a class="announcement-row" href="ai.html"><span class="announcement-dot announcement-dot--coral"></span><div><strong>New AI study helper available</strong><small>Get help with notes and revision questions</small></div><i class="fa fa-angle-right"></i></a>
+      </section>
+    </section>
+
+    <div class="dashboard-grid">
+      <section class="dashboard-card dashboard-card--courses">
+        <div class="dashboard-card__heading"><div><p class="eyebrow">KEEP LEARNING</p><h2>Recently accessed courses</h2></div><a href="enrolled-courses.html">View all <i class="fa fa-arrow-right"></i></a></div>
+        <div class="course-list">
+          <a class="course-row" href="subject.html?subject=English%20Language"><img src="assets/img/course/1.png" alt=""><div class="course-row__content"><div class="course-row__top"><strong>English Language</strong><span>68%</span></div><small>Language and Communication</small><div class="progress-track"><span style="width:68%"></span></div></div><i class="fa fa-angle-right course-row__arrow"></i></a>
+          <a class="course-row" href="subject.html?subject=Mathematics"><img src="assets/img/course/2.png" alt=""><div class="course-row__content"><div class="course-row__top"><strong>Mathematics</strong><span>54%</span></div><small>Mathematics Department</small><div class="progress-track"><span style="width:54%"></span></div></div><i class="fa fa-angle-right course-row__arrow"></i></a>
+          <a class="course-row" href="subject.html?subject=General%20Science"><img src="assets/img/course/3.png" alt=""><div class="course-row__content"><div class="course-row__top"><strong>General Science</strong><span>42%</span></div><small>Science Department</small><div class="progress-track"><span style="width:42%"></span></div></div><i class="fa fa-angle-right course-row__arrow"></i></a>
+        </div>
+      </section>
+
+      <aside class="dashboard-card dashboard-card--today">
+        <div class="dashboard-card__heading"><div><p class="eyebrow">YOUR DAY</p><h2>Today at a glance</h2></div><span class="today-status"><i class="fa fa-circle"></i> On track</span></div>
+        <div class="focus-card"><div class="focus-card__icon"><i class="ti-target"></i></div><div><small>TOP PRIORITY</small><strong>Finish your science project</strong><p>Due tomorrow · General Science</p></div></div>
+        <div class="quick-actions"><a href="assignments.html"><i class="ti-pencil-alt"></i><span>Review tasks</span><i class="fa fa-angle-right"></i></a><a href="quizzes.html"><i class="ti-stats-up"></i><span>Practice a quiz</span><i class="fa fa-angle-right"></i></a><a href="sessions.html"><i class="ti-calendar"></i><span>View study sessions</span><i class="fa fa-angle-right"></i></a></div>
+        <div class="study-tip"><i class="ti-light-bulb"></i><p><strong>Study tip</strong><br>Try a 25-minute focus session, then take a short break.</p></div>
+      </aside>
+
+      <section class="dashboard-card dashboard-card--timeline">
+        <div class="activity-layout">
+          <div class="activity-list">
+            <div class="dashboard-card__heading"><div><p class="eyebrow">DON’T MISS A DEADLINE</p><h2>Upcoming activity</h2></div><a href="assignments.html">See all <i class="fa fa-arrow-right"></i></a></div>
+            <div class="timeline-item"><div class="timeline-date"><strong>01</strong><small>AUG</small></div><div class="timeline-icon timeline-icon--coral"><i class="ti-folder"></i></div><div class="timeline-copy"><strong>Projects is due</strong><span>General Science · Project submission</span></div><a href="assignments.html" class="timeline-action">Submit</a></div>
+            <div class="timeline-item"><div class="timeline-date"><strong>01</strong><small>AUG</small></div><div class="timeline-icon timeline-icon--purple"><i class="ti-folder"></i></div><div class="timeline-copy"><strong>Lab 3 &amp; 4 is due</strong><span>Mathematics · Practical assignment</span></div><a href="assignments.html" class="timeline-action">Submit</a></div>
+            <div class="timeline-item"><div class="timeline-date"><strong>04</strong><small>AUG</small></div><div class="timeline-icon timeline-icon--gold"><i class="ti-pencil-alt"></i></div><div class="timeline-copy"><strong>Mathematics revision quiz</strong><span>Practice assessment · 10:30</span></div><a href="quizzes.html" class="timeline-action">Open</a></div>
+          </div>
+          <aside class="mini-calendar" aria-label="August 2026 calendar">
+            <div class="mini-calendar__heading"><strong>August 2026</strong><button aria-label="More calendar options"><i class="fa fa-ellipsis-h"></i></button></div>
+            <div class="calendar-week"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+            <div class="calendar-days"><span class="is-muted">27</span><span class="is-muted">28</span><span class="is-muted">29</span><span class="is-muted">30</span><span class="is-muted">31</span><span>1</span><span>2</span><span>3</span><span class="has-event">4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div>
+            <p class="calendar-note"><i class="fa fa-circle"></i> 2 deadlines this month</p>
+          </aside>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <script src="assets/js/jquery-1.12.4.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
